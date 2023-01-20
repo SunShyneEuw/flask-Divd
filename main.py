@@ -1,13 +1,18 @@
-from flask import Flask, jsonify
-import os
+from flask import Flask, render_template, request
 
+# Créer l'app
 app = Flask(__name__)
 
-
-@app.route('/')
+# Création des routes/urls
+# Url de base : Acceuil
+@app.route('/', methods=["GET","POST"])
 def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+
+    if request.method == "POST":
+        print(request.form["name"])
+
+    return render_template("index.html")
 
 
-if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
+if __name__ == "__main__":
+    app.run(debug=True) # host="0.0.0.0", 

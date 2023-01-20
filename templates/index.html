@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Title -->
+  <title>Quiz Memory</title>
+
+  <!-- Meta Tags required for Progressive Web App -->
+  <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+  <meta name="theme-color" content="black">
+
+  <!-- Manifest File link -->
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+
+<body>
+  
+  <h1>Quiz Game</h1>
+    <p>Bienvnue sur la demo du premier quiz.</p>
+    <form method="post">
+
+        <div>
+            <label for="">Comment t'appelle tu ?</label>
+            <input name="name" required/>
+            <br/><br/>
+        </div>
+
+        <div>
+            <h2>Quiz n°1 : Culture Geek</h2>
+            <p>Ce quiz testeras t'a culture geek au travers de diverse question.
+                Ton score seras afficher a la fin du quiz.</p>
+            <p>Bonne chance et amuse toi !</p>
+        </div>
+
+        <div>
+
+            <h2>En quelle année est sortie le premier téléphone portable ?</h2>
+
+            <label for="q1-rep-1">1990</label>
+            <input type="radio" id ="q1-rep-1" name="question-1" value="1990">
+            
+            <label for="q1-rep-1">1986</label>
+            <input type="radio" id ="q1-rep-2" name="question-1" value="1986">
+
+            <label for="q1-rep-1">1973</label>
+            <input type="radio" id ="q1-rep-3" name="question-1" value="1973">
+
+            <label for="q1-rep-1">1999</label>
+            <input type="radio" id ="q1-rep-4" name="question-1" value="1999">
+            
+        </div>
+
+
+
+    <button type="submit">Submit</button>
+
+    </form>
+
+
+  <script>
+      window.addEventListener('load', () => {
+        registerSW();
+      });
+  
+      // Register the Service Worker
+      async function registerSW() {
+        if ('serviceWorker' in navigator) {
+          try {
+            await navigator
+                  .serviceWorker
+                  .register("{{ url_for('static', filename='serviceworker.js')}}");
+          }
+          catch (e) {
+            console.log('SW registration failed');
+          }
+        }
+      }
+  </script>
+
+</body>
+</html>
