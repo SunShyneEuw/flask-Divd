@@ -1,6 +1,22 @@
 body{
 
     background-color: antiquewhite;
+    font-size: 1rem;
     text-align: center;
 
+}
+h1{
+    color: darkviolet;
+    text-decoration: underline;
+}
+h2{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    font-size: 1.2rem;
+    text-align: center;
+    color: blue;
 }
