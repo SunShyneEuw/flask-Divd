@@ -1,12 +1,12 @@
 {
-	"name":"PWA Tutorial",
-	"short_name":"PWA",
+	"name":"Quiz Memory",
+	"short_name":"Quiz Memory",
 	"start_url":"index.html",
 	"display":"standalone",
 	"background_color":"#5900b3",
 	"theme_color":"black",
 	"scope": ".",
-	"description":"This is a PWA tutorial.",
+	"description":"Quiz Memory est un jeu qui travailleras votre mémoire au traver de différents quizzs",
 	"icons":[
 	{
 	"src":"images/icon-192x192.png",					
