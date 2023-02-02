@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Questionnaire</title>
+</head>
+
+<body>
+
+    <h1>As tu retenue la commande ?</h1>
+
+    <form method="post">
+
+        <div>
+            <h2>Quelle sandwich ?</h1>
+            <label for="sandwich">sandwich :</label>
+            <input type="text" name="sandwich" required>
+            <br><br>
+        </div>
+        <div>
+            <label for="sauce">Sauce :</label>
+            <input type="text" name="sauce" required>
+            <br><br>
+        </div>
+        <div>
+            <label for="vegetables">Crudités :</label>
+            <input type="text" name="vegetables" required>
+            <br><br>
+        </div>
+        <div>
+            <label for="bread">Type de pain :</label>
+            <input type="text" name="bread" required>
+            <br><br>
+        </div>
+
+        <button type="submit">Valider</button>
+
+    </form>
+    
+    <br><br>
+
+    <a href="/">Rééssayer</a>
+    
+</body>
+</html>
