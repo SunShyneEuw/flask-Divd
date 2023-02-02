@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Calcul Mentaux des Table de Multiplication</h1>
+    <p>Vous allez devoir répondre a une dizaine de calcule 
+        de table de multiplication.Votre score et votre temps vous 
+        seront donnée a la fin du test</p>
+    
+    <form method="post">
+        <div>
+            <label for="name">Comment t'appelle tu ?</label>
+            <input name="name" required/>
+            <br/><br/>
+        </div>
+        <button type="submit">Commencer !</button>
+    </form>
+
+</body>
+</html>
