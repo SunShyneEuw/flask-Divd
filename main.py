@@ -5,20 +5,20 @@ et enfin la page de résultat
 from flask import Flask, render_template, request
 from functionsfoods import *
 
-
-commande = generate_commande()
-
 app = Flask(__name__)
 
 @app.route('/')
 def home():
+
+    global commande
+    commande = generate_commande()
 
     return render_template("home.html",sandwich = commande[0],
                            sauce = commande[1],vegetables = commande[2],
                            bread = commande[3])
 
 @app.route('/survey', methods=["GET","POST"])
-def survey():
+def survey():  
 
     if request.method == "POST":
 
