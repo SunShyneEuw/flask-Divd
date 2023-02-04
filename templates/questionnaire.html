@@ -14,25 +14,54 @@
 
     <form method="post">
 
+        <h2>Quelle sandwich ?</h1>
+
         <div>
-            <h2>Quelle sandwich ?</h1>
             <label for="sandwich">sandwich :</label>
-            <input type="text" name="sandwich" required>
+            <select name="sandwich" id="sandwich">
+                <option value="">--Veuillez Selectionner une option</option>
+                <option value="mexicanos">Mexicanos</option>
+                <option value="panini dinde">Panini Dinde</option>
+                <option value="panini viande hachée">Panini Viande Hachée</option>
+                <option value="poulet mayo">Poulet Mayo</option>
+                <option value="merguez">Merguez</option>
+            </select>
             <br><br>
         </div>
+
         <div>
             <label for="sauce">Sauce :</label>
-            <input type="text" name="sauce" required>
+            <select name="sauce" id="sauce">
+                <option value="">--Veuillez Selectionner une option</option>
+                <option value="andalouse">Andalouse</option>
+                <option value="poivre">Poivre</option>
+                <option value="mayonnaise">Mayonnaise</option>
+                <option value="hannibal">Hannibal</option>
+                <option value="algérienne">Algérienne</option>
+                <option value="samourai">Samourai</option>
+            </select>
             <br><br>
         </div>
         <div>
             <label for="vegetables">Crudités :</label>
-            <input type="text" name="vegetables" required>
+            <select name="vegetables" id="vegetables">
+                <option value="">--Veuillez Selectionner une option</option>
+                <option value="sans crudités">Sans Crudités</option>
+                <option value="salades">Salades</option>
+                <option value="tomates">Tomates</option>
+                <option value="olives">Olives</option>
+                <option value="cornichon">Cornichon</option>
+            </select>
             <br><br>
         </div>
         <div>
             <label for="bread">Type de pain :</label>
-            <input type="text" name="bread" required>
+            <select name="bread" id="bread">
+                <option value="">--Veuillez Selectionner une option</option>
+                <option value="baguette">Baguette</option>
+                <option value="galette">Galette</option>
+                <option value="faluche">Faluche</option>
+            </select>
             <br><br>
         </div>
 
@@ -41,8 +70,6 @@
     </form>
     
     <br><br>
-
-    <a href="/">Rééssayer</a>
     
 </body>
 </html>

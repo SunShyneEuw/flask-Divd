@@ -11,11 +11,20 @@
 
     <h1>Les résultat :</h1>
 
-    <p>Tu as obtenue un scrore de { score }/4</p>
+    <p>Tu as obtenue un scrore de {{ score }}/4</p>
     <p>Comparatif</p>
+    
+      <p> </p>
+    
     <ul>
-        Commande demandé :<li>{{ list_commande }}</li>
-        Commande éffectuer :<li>{{ list_commande_select }}</li>
+        Commande demandé :
+        {% for your_list_element in list_commande %}
+        <li>{{ your_list_element }}</li>
+        {% endfor %}
+        Commande éffectuer :
+        {% for your_list_element in list_commande_select %}
+        <li>{{ your_list_element }}</li>
+        {% endfor %}
     </ul>
 
     <br><br>
